@@ -10,10 +10,6 @@ taskForm.addEventListener("submit", (e) => {
   e.preventDefault()
   const taskInput = taskForm["new-task-description"].value
 
-  // const newLiElement = document.createElement('li')
-  // newLiElement.innerText = taskInput
-  // taskItemUl.appendChild(newLiElement)
-
   taskItemUl.innerHTML += `<li id=${taskInput}>${taskInput}</li><button id=${taskInput}>X</button>`
 
   taskForm["new-task-description"].value = ""
@@ -21,7 +17,6 @@ taskForm.addEventListener("submit", (e) => {
 });
 
 taskItemUl.addEventListener("click", (e) => {
-  //e.preventDefault()
   clickMe(e);
 });
 
